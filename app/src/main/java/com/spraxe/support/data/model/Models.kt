@@ -65,6 +65,7 @@ data class OrderRow(
     val status: String = "pending",
     @SerialName("payment_status") val paymentStatus: String? = null,
     @SerialName("payment_method") val paymentMethod: String? = null,
+    @SerialName("payment_transaction_id") val paymentTransactionId: String? = null,
     @SerialName("shipping_address") val shippingAddress: String? = null,
     @SerialName("delivery_location") val deliveryLocation: String? = null,
     @SerialName("shipping_cost") val shippingCost: Double? = null,

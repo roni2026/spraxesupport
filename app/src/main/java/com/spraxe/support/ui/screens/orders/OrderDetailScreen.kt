@@ -21,6 +21,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.spraxe.support.ui.components.LoadingIndicator
@@ -51,6 +52,14 @@ fun OrderDetailScreen(orderId: String, viewModel: OrderDetailViewModel = viewMod
                     order.contactNumber?.let { Text("Phone: $it", modifier = Modifier.padding(top = 4.dp)) }
                     order.shippingAddress?.let { Text("Address: $it", modifier = Modifier.padding(top = 4.dp)) }
                     Text("Payment: ${order.paymentMethod ?: "N/A"} (${order.paymentStatus ?: "pending"})", modifier = Modifier.padding(top = 4.dp))
+                    if (!order.paymentTransactionId.isNullOrBlank()) {
+                        Text(
+                            "Transaction ID: ${order.paymentTransactionId}",
+                            style = MaterialTheme.typography.bodyMedium,
+                            fontWeight = FontWeight.Bold,
+                            modifier = Modifier.padding(top = 2.dp)
+                        )
+                    }
                 }
             }
         }
