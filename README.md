@@ -12,6 +12,15 @@ customers.
   <img src="branding/spraxe_support_logo.png" width="160" alt="Spraxe Support logo" />
 </p>
 
+## ⚠️ This is NOT an Expo / React Native project
+
+If `npm install` fails with something like *"no such file"* or *"package.json not found"*,
+that's expected: **there is no `package.json`, `app.json`, or any Node/JS code in this repo.**
+This is a 100% native Android app written in **Kotlin + Jetpack Compose**, built with
+**Gradle** — not Expo/React Native/npm. Open it in Android Studio (or run
+`./gradlew assembleDebug` from a terminal with JDK 17) instead of any `npm`/`expo` command.
+See the **Setup** section below for the one required config value (`SUPABASE_ANON_KEY`).
+
 ## Features
 
 - **Staff-only sign-in**: Email + password against the shared Supabase Auth project. After
