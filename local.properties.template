@@ -1,0 +1,7 @@
+# Copy this file to "local.properties" (same directory) for local development.
+# local.properties is gitignored and never committed -- it's the right place to put
+# your real Supabase anon key if you don't want it in gradle.properties.
+#
+# sdk.dir=/path/to/your/Android/sdk
+# SUPABASE_URL=https://kybgrsqqvejbvjediowo.supabase.co
+# SUPABASE_ANON_KEY=your-real-anon-key-here
